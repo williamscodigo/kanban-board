@@ -12,7 +12,8 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log(loginCheck);
+    //debugger;
+    // console.log(loginCheck);
     checkLogin();
   }, [loginCheck])
 
@@ -26,7 +27,7 @@ const Navbar = () => {
         !loginCheck ? (
           <li className='nav-item'>
             <button type='button'>
-              <Link to='/login'>Login</Link>
+              <Link to='/login' className='nav-link'>Login</Link>
             </button>
           </li>
         ) : (

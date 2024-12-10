@@ -1,9 +1,8 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin) => {
-  // TODO: make a POST request to the login route
   try {
-    console.log('Userinfo front-end-b4sending: ', userInfo);
+    
     const response = await fetch('/auth/login', {
       method: 'POST',
       headers: {
@@ -13,7 +12,6 @@ const login = async (userInfo: UserLogin) => {
     });
 
     const data = await response.json();
-    console.log('front-end-response-from-backend: ', data);
 
     if (!response.ok) {
       throw new Error('User information not retrieved, check network tab!');
